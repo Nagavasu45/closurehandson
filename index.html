@@ -77,6 +77,129 @@
                    3
         </pre>
     </h3>
-    <h3>explaination:In this logic we have forloop with setTimeout() soo</h3>
+    <h3>explaination:In this logic we have forloop with setTimeout() with one function log()
+        and setTimeout method has 1000milesconds so setTimeout will execute after one second in this for loop
+        itarate three times soo finally i value is 3 that's why after completion of one sec we got 3,3,3
+
+    </h3>
+    <h2>Q4.	Write a code to calculate area of a rectangle using inner function. In this case outer function should accept parameter length and inner function should accept parameter breadth.
+
+    </h2>
+    <h3>
+        <pre>
+            function outer(length){
+                function inner(width){
+                    return( length * breadth)
+                }
+                return inner
+                
+            }
+            let res=outer(4)
+            console.log(res(5))
+        </pre>
+    </h3>
+    <h2>
+        output:20
+    </h2>
+    <h3>
+        explaination:here i have taken one outer function and one inner function for getting area of the rectangle
+        i have called outer function with parameter length with value '4' and outer function takes the length and 
+        return to the inner function ,at the same we called inner function with parameter breadth with value soo outer function result stored in 
+        variable soo we called inner function res(5) that's it. finally we got area of trinagle
+    </h3>
+    <h2>Q5:Take a variable in outer function and create an inner function to increase the counter every time it is called 'closure'
+
+    </h2>
+    <h3>
+        <pre>Explaination with example:this is the code for that if we call the inner function with outer function variable 
+            refrence and how many times called inner function count will be increase 
+            function outer(){
+                var count=
+                function inner(){
+                    return ++count
+                }
+                return inner
+                
+            }
+            let res=outer()
+            console.log(res())
+            console.log(res())
+            console.log(res())
+        </pre>
+    </h3>
+    <h2><pre>
+        output:1 
+               2
+               3
+    </pre></h2>
+    <h2><pre>
+        Q6.	"Print Output
+
+        var a = 12;
+        (function () {
+            alert(a);
+        })();"
+    </pre>
+    </h2>
+    <h3>
+        output:12
+    </h3>
+    <h3>
+        explaination:it's an one annonamous function and outside we have global variable with value like
+        var a=12, but inside side of the we used that variable with alert(a) so, there is no local varible 'a' then it's search in globly 
+        that why we got 12 answer
+    </h3>
+    <h2>
+        <pre>
+            Q7.	"var a = 10;
+                var x = (function () {
+                    var a = 12;
+                    return function () {
+                        alert(a);
+                    };
+                })();
+                x();"   
+        </pre>
+    </h2>
+    <h3>output:12</h3>
+    <h3>explaination:here also we can see same logic like Q6 , but here they were added return to called annonamous function
+        inside of inner function and variable also in functional scope and if we use the variable inside of annonamous function
+        then it will take functional scope variable only
+    </h3>
+    <h2>
+        <pre>
+            Q8.	"var globalVar = "xyz";
+
+                (function outerFunc(outerArg) {
+                    var outerVar = 'a';
+    
+                    (function innerFunc(innerArg) {
+                        var innerVar = 'b';
+    
+                        console.log(
+                        "outerArg = " + outerArg + "\n" +
+                        "innerArg = " + innerArg + "\n" +
+                        "outerVar = " + outerVar + "\n" +
+                        "innerVar = " + innerVar + "\n" +
+                        "globalVar = " + globalVar);
+    
+                    })(456);
+                })(123);"
+        </pre>
+    </h2>
+    <h3>
+        <pre>output:
+            outerArg = 123
+            innerArg = 456
+            outerVar = a
+            innerVar = b
+            globalVar = xyz
+        </pre>
+    </h3>
+    <h3>explaination:there we have two anonymous functions ,one is  outerfunc and one is  innerfunc  with 2 diffrent parameters
+        and inside of functions declared varable with value and we are passing values through the parameters and there is one statment 
+        for print the values and based on varible names with values will display and in this we used global varible also..
+
+    </h3>
 </body>
 </html>
