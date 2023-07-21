@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        <pre>
+            Q1.	"    function counter(){
+                        var counter = 0;
+
+                        function IncreaseCounter() {
+                            return counter += 1;
+                            };
+
+                        return IncreaseCounter;
+                    }
+
+                    var counter = counter();
+                    alert(counter());
+                    alert(counter());
+                    alert(counter());
+                    alert(counter());"
+        </pre>
+    </h2>
+    <h2><pre>
+        output:1
+               2
+               3
+               4
+
+        </pre>
+        
+    </h2>
+    <h3>explaination:In this question we have function with function and function name is counter()
+        we call the function outside of the function with assigned to new variable that
+        variable name counter and in function we have functional scope varible named as counter=0
+        and then in the alret we are calling the inner function and we called 4 times alert(counter())
+        and  main funcation have functional scope variable so and we are calling inner function 4 times
+        we get 1,2,3,4
+
+    </h3>
+    <h2><pre>Q2 "let count = 0;
+        (function () {
+            if (count === 0) {
+                let count = 1;
+                console.log(count); // What is logged?
+            }
+        console.log(count); // What is logged?
+        })();"
+    </pre>
+    </h2>
+    <h3><pre>
+        output:1
+               0
+    </pre></h3>
+    <h3>Explaination:In this code we have global variable count=0 and called one annonamous function
+        and in the function if count===0 then inside of if block we have one more varible let count=1
+        and if we have console.log(count); here we get 1 because of block level scope same name variable there soo
+        and  console.log(count) statement wrote at outof the block so we get 0 and inside of the function we donot
+        have counter name varible soo check with global level then we find the variable that varible have 0
+    </h3>
+    <h2><pre>
+        Q3.	"for (var i = 0; i < 3; i++) {
+            setTimeout(function log() {
+              console.log(i); // What is logged?
+            }, 1000);
+          }"
+        </pre>
+    </h2>
+    <h3>
+        <pre>
+            output:3
+                   3
+                   3
+        </pre>
+    </h3>
+    <h3>explaination:In this logic we have forloop with setTimeout() soo</h3>
+</body>
+</html>
